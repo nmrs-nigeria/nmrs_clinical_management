@@ -16,10 +16,8 @@ import org.openmrs.module.nmrsclinicals.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-@Repository("nmrsclinicals.NMRSClinicalsDao")
 public class NMRSClinicalsDao {
 	
-	@Autowired
 	DbSessionFactory sessionFactory;
 	
 	private DbSession getSession() {
@@ -33,5 +31,12 @@ public class NMRSClinicalsDao {
 	public Item saveItem(Item item) {
 		getSession().saveOrUpdate(item);
 		return item;
+	}
+	
+	/**
+	 * @param sessionFactory the sessionFactory to set
+	 */
+	public void setSessionFactory(DbSessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
 	}
 }
