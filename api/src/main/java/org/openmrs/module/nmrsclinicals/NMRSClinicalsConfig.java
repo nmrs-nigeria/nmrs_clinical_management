@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 /**
  * Contains module's config.
  */
-@Component("nmrsclinicals.NMRSClinicalsConfig")
 public class NMRSClinicalsConfig {
 	
 	public final static String MODULE_PRIVILEGE = "NMRS Clinicals Privilege";
