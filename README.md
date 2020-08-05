@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nmrs-nigeria/nmrs_clinical_management.svg?branch=master)](https://travis-ci.org/github/nmrs-nigeria/nmrs_clinical_management)
+
 ${moduleName}
 ==========================
 
