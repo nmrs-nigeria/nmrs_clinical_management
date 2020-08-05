@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -10,7 +9,7 @@
 
 	<groupId>org.openmrs.module</groupId>
 	<artifactId>nmrsclinicals</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>NMRS Clinicals</name>
 	<description>NigeriaEMR module for Clinical Management Visuals</description>
@@ -18,10 +17,11 @@
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 
 	<scm>
-		<connection>scm:git:git@github.com:openmrs/openmrs-module-nmrsclinicals.git</connection>
-		<developerConnection>scm:git:git@github.com:openmrs/openmrs-module-nmrsclinicals.git</developerConnection>
+		<connection>scm:git:https://github.com/nmrs-nigeria/nmrs_clinical_management.git</connection>
+		<developerConnection>scm:git:https://github.com/nmrs-nigeria/nmrs_clinical_management.git</developerConnection>
 		<url>https://github.com/openmrs/openmrs-module-nmrsclinicals/</url>
-	</scm>
+	  <tag>HEAD</tag>
+  </scm>
     <build>
         <plugins>
             <plugin>
@@ -33,6 +33,25 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.2</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.shared</groupId>
+						<artifactId>maven-invoker</artifactId>
+						<version>2.2</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
+			</plugin>
         </plugins>
     </build>
     <modules>
@@ -74,4 +93,12 @@
         <formentryappVersion>1.3</formentryappVersion>
         <uicommonsModuleVersion>2.1</uicommonsModuleVersion>
     </properties>
+
+	<distributionManagement>
+		<repository>
+			<id>bintray-nmrs-maven</id>
+			<name>nmrs-maven</name>
+			<url>https://api.bintray.com/maven/nmrs/maven/openmrs-module-nmrsclinicals/;publish=1</url>
+		</repository>
+	</distributionManagement>
 </project>
