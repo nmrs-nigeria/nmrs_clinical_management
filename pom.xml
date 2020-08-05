@@ -17,9 +17,9 @@
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 
 	<scm>
-		<connection>scm:git:git@github.com:openmrs/openmrs-module-nmrsclinicals.git</connection>
-		<developerConnection>scm:git:git@github.com:openmrs/openmrs-module-nmrsclinicals.git</developerConnection>
-		<url>https://github.com/openmrs/openmrs-module-nmrsclinicals/</url>
+		<connection>scm:git:https://github.com/nmrs-nigeria/nmrs_clinical_management.git</connection>
+		<developerConnection>scm:git:https://github.com/nmrs-nigeria/nmrs_clinical_management.git</developerConnection>
+		<url>https://github.com/nmrs-nigeria/nmrs_clinical_management.git</url>
 	  <tag>1.0.1</tag>
   </scm>
     <build>
