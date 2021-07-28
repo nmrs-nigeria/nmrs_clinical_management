@@ -101,6 +101,10 @@
 		<file>messages_es.properties</file>
 	</messages>
 	<!-- /Internationalization -->
-	
+	<require_modules>
+		<require_module>
+			org.openmrs.module.uiframework
+		</require_module>
+	</require_modules>
 </module>
 
